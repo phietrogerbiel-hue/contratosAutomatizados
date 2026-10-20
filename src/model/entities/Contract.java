@@ -47,4 +47,13 @@ public class Contract {
     public void addList(Installment installment){
         this.installments.add(installment);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (Installment installment : installments) {
+            sb.append(installment).append("\n");
+        }
+        return sb.toString();
+    }
 }
